@@ -14,25 +14,6 @@
 
 ---
 
-## 🧱 Folder Structure
-
-RetailQueryPilot/
-│
-├── .github/workflows/ # CI/CD pipelines
-├── backend/
-│ ├── inference/ # query_processor.py (inference engine)
-│ └── model_training/
-│ ├── nl_to_sql_t5/ # T5 model training
-│ └── intent_classifier_bert/ # DistilBERT intent classifier
-├── data/ # retail_nl_sql_dataset.csv + intent_dataset.csv
-├── frontend/ # Gradio UI (app.py)
-├── scripts/ # generate_datasets.py
-├── requirements.txt
-└── .gitignore
-
-
----
-
 ## 🧪 How to Run
 
 ### 🔧 Setup
@@ -49,7 +30,7 @@ python backend/model_training/nl_to_sql_t5/train.py
 ```bash
 python backend/model_training/intent_classifier_bert/train.py
 ```
-###⚡ Run Inference (backend logic)
+### ⚡ Run Inference (backend logic)
 
 ```bash
 python backend/inference/query_processor.py
