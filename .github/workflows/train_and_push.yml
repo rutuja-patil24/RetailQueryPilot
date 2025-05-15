@@ -20,12 +20,12 @@ jobs:
     - name: Set up Python
       uses: actions/setup-python@v4
       with:
-        python-version: '3.10'  # ✅ Make sure this is correct
+        python-version: '3.10'
 
     - name: Install dependencies
       run: |
-        pip install --upgrade pip
-        pip install -r requirements.txt
+        python -m pip install --upgrade pip
+        python -m pip install --use-deprecated=legacy-resolver -r requirements.txt
 
     - name: Run T5 Training (NL→SQL)
       run: |
