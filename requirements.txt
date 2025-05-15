@@ -121,8 +121,8 @@ keras==3.8.0
 kiwisolver==1.4.8
 langchain==0.1.13
 langchain-anthropic==0.1.23
-langchain-community==0.2.11 #updated 
-langchain-core<0.3.0,>=0.2.12 #updated 
+langchain-community==0.1.9
+langchain-core>=0.2.12,<0.3.0
 langchain-groq==0.2.1
 langchain-huggingface==0.1.2
 langchain-openai==0.1.25
