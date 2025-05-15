@@ -10,7 +10,7 @@ on:
 
 jobs:
   train-models:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
 
     steps:
     - name: Checkout code
@@ -34,7 +34,7 @@ jobs:
         python backend/model_training/intent_classifier_bert/train.py
 
     - name: Upload Trained Models
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@91c7b57060e94228dc52b4147efdbbcfb9da8f80  # ✅ Fully qualified SHA to avoid metadata issues
       with:
         name: trained-models
         path: |
