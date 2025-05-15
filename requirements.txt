@@ -122,7 +122,7 @@ kiwisolver==1.4.8
 langchain==0.3.9
 langchain-anthropic==0.1.23
 langchain-community==0.2.11 
-langchain-core==0.3.21
+langchain-core==0.2.27 # updated 
 langchain-groq==0.2.1
 langchain-huggingface==0.1.2
 langchain-openai==0.1.25
