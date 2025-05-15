@@ -6,11 +6,11 @@ on:
       - 'data/**'
       - 'backend/model_training/**'
       - 'scripts/**'
-      - '.github/workflows/**'
+      - '.github/workflows/train_and_push.yml'
 
 jobs:
   train-models:
-    runs-on: ubuntu-22.04  # 👈 FIXED version
+    runs-on: ubuntu-latest
 
     steps:
     - name: Checkout code
@@ -33,8 +33,8 @@ jobs:
       run: |
         python backend/model_training/intent_classifier_bert/train.py
 
-    - name: Upload Trained Models
-      uses: actions/upload-artifact@v3
+    - name: Upload Trained Models (Optional)
+      uses: actions/upload-artifact@v2  # ✅ FIXED version
       with:
         name: trained-models
         path: |
