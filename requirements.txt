@@ -214,7 +214,7 @@ python-multipart==0.0.20
 python-slugify==8.0.4
 pytz==2024.1
 pyviz_comms==3.0.4
-pywin32==306
+pywin32==306; sys_platform == "win32"
 pywinpty==2.0.13
 PyYAML==6.0.2
 pyzmq==26.2.0
