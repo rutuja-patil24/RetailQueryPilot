@@ -6,20 +6,21 @@ on:
       - 'data/**'
       - 'backend/model_training/**'
       - 'scripts/**'
+      - 'requirements.txt'
       - '.github/workflows/**'
 
 jobs:
   train-models:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
 
     steps:
     - name: Checkout code
       uses: actions/checkout@v3
 
-    - name: Set up Python 3.10
+    - name: Set up Python
       uses: actions/setup-python@v4
       with:
-        python-version: '3.10'
+        python-version: 3.10
 
     - name: Install dependencies
       run: |
