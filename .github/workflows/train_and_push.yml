@@ -34,7 +34,7 @@ jobs:
         python backend/model_training/intent_classifier_bert/train.py
 
     - name: Upload Trained Models (Optional)
-      uses: actions/upload-artifact@v2  # ✅ FIXED version
+      uses: actions/upload-artifact@v3
       with:
         name: trained-models
         path: |
