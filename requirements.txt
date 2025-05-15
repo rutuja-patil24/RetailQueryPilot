@@ -276,8 +276,8 @@ tokenizers==0.20.3
 toml==0.10.2
 tomlkit==0.12.5
 toolz==1.0.0
-torch==2.6.0+cu118
-torchaudio==2.6.0+cu118
+torch==2.6.0
+torchaudio==2.6.0
 torchvision==0.21.0
 tornado==6.4.1
 tqdm==4.67.1
