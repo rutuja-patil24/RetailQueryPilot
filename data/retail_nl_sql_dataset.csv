@@ -1,0 +1,5 @@
+question,sql
+What were the total sales in March?,SELECT SUM(amount) FROM transactions WHERE MONTH(date) = 3;
+Top 5 stores with highest revenue?,"SELECT store_id, SUM(amount) as total FROM transactions GROUP BY store_id ORDER BY total DESC LIMIT 5;"
+List top 3 products by return rate.,"SELECT product_id, COUNT(*) / (SELECT COUNT(*) FROM transactions) AS return_rate FROM returns GROUP BY product_id ORDER BY return_rate DESC LIMIT 3;"
+Which category sold the most in Q1?,"SELECT category, SUM(amount) FROM transactions WHERE QUARTER(date) = 1 GROUP BY category ORDER BY SUM(amount) DESC LIMIT 1;"

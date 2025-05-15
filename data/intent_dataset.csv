@@ -1,0 +1,7 @@
+question,intent
+What were the total sales in March?,summary
+Compare sales of electronics vs clothing.,compare
+How did Q1 2024 sales compare to Q1 2023?,trend
+Which product had abnormal returns last week?,anomaly
+Show me a summary of monthly revenue.,summary
+Compare revenue across all store branches.,compare

@@ -1,0 +1,4 @@
+0 anomaly
+1 compare
+2 summary
+3 trend

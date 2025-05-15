@@ -1,0 +1,13 @@
+# Ignore model checkpoints
+**/checkpoints/
+**/final_model/
+**/__pycache__/
+*.pt
+*.bin
+*.safetensors
+*.log
+*.tfevents.*
+
+# System files
+.DS_Store
+Thumbs.db
