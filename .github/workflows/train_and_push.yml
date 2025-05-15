@@ -6,37 +6,37 @@ on:
       - 'data/**'
       - 'backend/model_training/**'
       - 'scripts/**'
-      - '.github/workflows/**'  # ✅ Added to trigger when workflow changes
+      - '.github/workflows/**'
 
 jobs:
   train-models:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
+    - name: Checkout code
+      uses: actions/checkout@v3
 
-      - name: Set up Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: 3.10
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: 3.10
 
-      - name: Install dependencies
-        run: |
-          pip install -r requirements.txt
+    - name: Install dependencies
+      run: |
+        pip install -r requirements.txt
 
-      - name: Run T5 Training (NL→SQL)
-        run: |
-          python backend/model_training/nl_to_sql_t5/train.py
+    - name: Run T5 Training (NL→SQL)
+      run: |
+        python backend/model_training/nl_to_sql_t5/train.py
 
-      - name: Run BERT Intent Classifier Training
-        run: |
-          python backend/model_training/intent_classifier_bert/train.py
+    - name: Run BERT Intent Classifier Training
+      run: |
+        python backend/model_training/intent_classifier_bert/train.py
 
-      - name: Upload Trained Models (Optional)
-        uses: actions/upload-artifact@v3
-        with:
-          name: trained-models
-          path: |
-            backend/model_training/nl_to_sql_t5/final_model/
-            backend/model_training/intent_classifier_bert/final_model/
+    - name: Upload Trained Models (Optional)
+      uses: actions/upload-artifact@v3
+      with:
+        name: trained-models
+        path: |
+          backend/model_training/nl_to_sql_t5/final_model/
+          backend/model_training/intent_classifier_bert/final_model/
