@@ -215,7 +215,7 @@ python-slugify==8.0.4
 pytz==2024.1
 pyviz_comms==3.0.4
 pywin32==306; sys_platform == "win32"
-pywinpty==2.0.13
+pywinpty==2.0.13; sys_platform == "win32"
 PyYAML==6.0.2
 pyzmq==26.2.0
 referencing==0.36.2
