@@ -22,7 +22,6 @@ jobs:
 
     - name: Install dependencies
       run: |
-        pip install --upgrade pip
         pip install -r requirements.txt
 
     - name: Run T5 Training (NL→SQL)
@@ -34,7 +33,7 @@ jobs:
         python backend/model_training/intent_classifier_bert/train.py
 
     - name: Upload Trained Models (Optional)
-      uses: actions/upload-artifact@v3.1.3
+      uses: actions/upload-artifact@v3
       with:
         name: trained-models
         path: |
